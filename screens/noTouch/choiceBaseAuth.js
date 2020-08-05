@@ -14,9 +14,9 @@ const ChoiceBaseAuthScreen = (props) => {
   };
   return (
     <View style={styles.screen}>
-      <Text style={styles.text}>Nearby Lifts</Text>
+      {/* <Text style={styles.text}>Nearby Lifts</Text>
       <DeviceComp name="Lift1" press={handler2} />
-      <DeviceComp name="Lift2" press={handler2} />
+      <DeviceComp name="Lift2" press={handler2} /> */}
       <Text style={styles.text}>Nearby Doors</Text>
       <DeviceComp name="Door23" press={handler1} />
       <DeviceComp name="Door22" press={handler1} />
