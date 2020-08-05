@@ -15,6 +15,9 @@ import ChatBot from '../screens/ChatRoom/chatBot';
 import ChatRoom from '../screens/ChatRoom/charRoom';
 import Questions from '../screens/ChatRoom/Questions';
 import KeepMeSafeScreen from '../screens/keepMeSafe';
+import FingerprintScreen from '../screens/noTouch/fingerprint';
+import HearMeScreen from '../screens/noTouch/hearMe';
+import ChoiceBaseAuthScreen from '../screens/noTouch/choiceBaseAuth';
 
 const Stack = createStackNavigator();
 
@@ -88,6 +91,25 @@ export const KeepMeSafeStack = () => (
     }}
   >
     <Stack.Screen name="Keep Me Safe!" component={KeepMeSafeScreen} />
+  </Stack.Navigator>
+);
+
+export const NoTouchStack = () => (
+  <Stack.Navigator
+    screenOptions={{
+      headerTintColor: 'white',
+      headerStyle: { backgroundColor: '#007aff' },
+    }}
+  >
+    <Stack.Screen name="Hear Me!" component={HearMeScreen} />
+    <Stack.Screen
+      name="Choice based authorization"
+      component={ChoiceBaseAuthScreen}
+    />
+    <Stack.Screen
+      name="Identity based authorization"
+      component={FingerprintScreen}
+    />
   </Stack.Navigator>
 );
 
