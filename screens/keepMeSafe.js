@@ -10,29 +10,7 @@ import {
 } from 'react-native';
 import HeaderButton from '../components/HeaderButton';
 import Filter from '../components/Filter';
-
-const DeviceComp = (props) => {
-  return (
-    <TouchableNativeFeedback
-      background={TouchableNativeFeedback.Ripple('white')}
-    >
-      <View
-        style={{
-          width: '80%',
-          backgroundColor: 'black',
-          paddingVertical: 10,
-          paddingHorizontal: 15,
-          borderRadius: 5,
-          marginTop: 10,
-        }}
-      >
-        <Text style={{ color: 'white', fontSize: 18, fontWeight: 'bold' }}>
-          {props.name}
-        </Text>
-      </View>
-    </TouchableNativeFeedback>
-  );
-};
+import DeviceComp from '../components/DeviceComp';
 
 const SettingsPage = ({ navigation }) => {
   useLayoutEffect(() => {

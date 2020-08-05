@@ -11,6 +11,7 @@ import HeaderButton from '../../components/HeaderButton';
 import Input from '../../components/Input';
 import Card from '../../components/Card';
 import CustomButton from '../../components/Button';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const FORM_INPUT_UPDATE = 'FORM_INPUT_UPDATE';
 
@@ -117,7 +118,7 @@ const RequestGeneralScreen = (props) => {
   };
 
   return (
-    <View style={styles.screen}>
+    <ScrollView contentContainerStyle={styles.screen}>
       <Card style={styles.card}>
         <Input
           id="name"
@@ -203,12 +204,12 @@ const RequestGeneralScreen = (props) => {
           Request For Approval
         </CustomButton>
       </Card>
-    </View>
+    </ScrollView>
   );
 };
 export default RequestGeneralScreen;
 const styles = StyleSheet.create({
-  screen: { alignItems: 'center', flex: 1, justifyContent: 'center' },
+  screen: { alignItems: 'center', justifyContent: 'center' },
   card: {
     width: '90%',
     paddingHorizontal: 30,

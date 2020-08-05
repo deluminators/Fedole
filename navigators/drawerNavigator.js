@@ -8,6 +8,7 @@ import {
   LetGoStack,
   ChatStack,
   KeepMeSafeStack,
+  NoTouchStack,
 } from './stackNavigators';
 import CustomDrawer from '../components/customDrawer';
 
@@ -30,6 +31,7 @@ export const DrawerNavigator = () => (
     <Drawer.Screen name="Scan QRcode" component={QRcodeStack} />
     <Drawer.Screen name="Chat Room" component={ChatStack} />
     <Drawer.Screen name="Keep Me Safe!" component={KeepMeSafeStack} />
+    <Drawer.Screen name="Hear Me!" component={NoTouchStack} />
     <Drawer.Screen name="Profile" component={StackUser} />
   </Drawer.Navigator>
 );
