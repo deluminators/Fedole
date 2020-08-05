@@ -18,6 +18,12 @@ import KeepMeSafeScreen from '../screens/keepMeSafe';
 import FingerprintScreen from '../screens/noTouch/fingerprint';
 import HearMeScreen from '../screens/noTouch/hearMe';
 import ChoiceBaseAuthScreen from '../screens/noTouch/choiceBaseAuth';
+import HomeScreen from '../screens/Home/HomeScreen';
+import LerningScreen from '../screens/Home/Learning';
+import DoubtClasses from '../screens/Home/DoubtClasses';
+import NoticeBoard from '../screens/Home/NoticeBoard';
+import FindMyPlace from '../screens/FindMyPlace/FindMyPlace';
+import MyPlace from '../screens/FindMyPlace/MyPlace';
 
 const Stack = createStackNavigator();
 
@@ -127,3 +133,49 @@ export const ChatStack = () => {
     </Stack.Navigator>
   );
 };
+
+export const HomeStack = () => (
+  <Stack.Navigator
+    screenOptions={{
+      headerTintColor: 'white',
+      headerStyle: { backgroundColor: '#007aff' },
+    }}
+  >
+    <Stack.Screen name="Home" component={HomeScreen} />
+  </Stack.Navigator>
+);
+
+export const LearnStack = () => (
+  <Stack.Navigator
+    screenOptions={{
+      headerTintColor: 'white',
+      headerStyle: { backgroundColor: '#007aff' },
+    }}
+  >
+    <Stack.Screen name="Learn" component={LerningScreen} />
+    <Stack.Screen name="Doubt Clearing Classes" component={DoubtClasses} />
+  </Stack.Navigator>
+);
+
+export const NoticeBoardStack = () => (
+  <Stack.Navigator
+    screenOptions={{
+      headerTintColor: 'white',
+      headerStyle: { backgroundColor: '#007aff' },
+    }}
+  >
+    <Stack.Screen name="Notice Board" component={NoticeBoard} />
+  </Stack.Navigator>
+);
+
+export const FindMyPlaceStack = () => (
+  <Stack.Navigator
+    screenOptions={{
+      headerTintColor: 'white',
+      headerStyle: { backgroundColor: '#007aff' },
+    }}
+  >
+    <Stack.Screen name="Find My Place" component={FindMyPlace} />
+    <Stack.Screen name="My Place" component={MyPlace} />
+  </Stack.Navigator>
+);

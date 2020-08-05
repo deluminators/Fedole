@@ -20,7 +20,7 @@ const CustomDrawer = (props) => {
     <DrawerContentScrollView {...props}>
       <TouchableNativeFeedback
         onPress={() => {
-          props.navigation.navigate('Profile');
+          props.navigation.navigate('Home');
         }}
       >
         <View
